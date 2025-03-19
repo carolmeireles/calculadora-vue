@@ -27,16 +27,21 @@ function realizaOperacao() {
 
 <template>
 
-<header>
+<div class="container">
+  <header class="pt-5 pb-5 mt-4">
     <h1>Calculadora Aritmética</h1>
 </header>
 
-<Operacao
-  :filtrar-operacao="(event) => (estado.filtro = event.target.value)"
-  :numero1="(event) => (estado.num1 = Number(event.target.value))"
-  :numero2="(event) => (estado.num2 = Number(event.target.value))" />
-
-  = {{ realizaOperacao() }}
+  <Operacao
+    :filtrar-operacao="(event) => (estado.filtro = event.target.value)"
+    :numero1="(event) => (estado.num1 = Number(event.target.value))"
+    :numero2="(event) => (estado.num2 = Number(event.target.value))" />
+  
+  <p>
+    O resultado da operação é... {{ realizaOperacao() }}
+  </p>
+ 
+</div>
 
 </template>
 
